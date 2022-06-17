@@ -1,0 +1,73 @@
+{
+  "name": "sage-events",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-functional": "^4.1.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "2.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.2",
+    "sass": "^1.52.0",
+    "shopify-buy": "^2.14.0",
+    "styled-components": "^5.3.3",
+    "stylelint": "^14.0.0",
+    "stylelint-actions-formatters": "^0.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^5.0.0",
+    "stylelint-declaration-strict-value": "^1.7.12",
+    "typescript": "^4.7.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:production": "env-cmd --no-override -f .env-cmd.production react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "eslint 'src/**/*.ts?(x)' --fix && pretty-quick --branch main",
+    "lint": "yarn lint:eslint && yarn lint:stylelint",
+    "lint:ci": "yarn lint:eslint:ci && yarn lint:stylelint",
+    "lint:eslint": "eslint 'src/**/*.ts?(x)'",
+    "lint:eslint:fix": "eslint 'src/**/*.ts?(x)' --fix",
+    "lint:eslint:ci": "eslint --output-file eslint_report.json --format json 'src/**/*.ts?(x)'",
+    "lint:stylelint": "stylelint 'src/**/*.?(s)css' --custom-formatter=node_modules/stylelint-actions-formatters",
+    "prettier:ci": "prettier --list-different \"**/*.{js,jsx,ts,tsx,scss,json}\"",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,scss,json}\" --list-different",
+    "prettier:bin": "prettier",
+    "sass": "^1.43.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/shopify-buy": "^2.10.10"
+  }
+}
