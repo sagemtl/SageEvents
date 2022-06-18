@@ -3,6 +3,10 @@ import { Client, LineItemToAdd, Product } from "shopify-buy";
 import checkoutState from "states/checkoutState";
 import shopifyApiState from "states/shopifyApiState";
 
+import styles from "./Event.module.scss";
+
+import logo from "../../../assets/logo-run.gif";
+
 interface Props {
   item: Product;
 }
@@ -28,18 +32,19 @@ const Event = ({ item }: Props) => {
         quantity: 1,
       },
     ];
-    console.log(lineItems);
-    console.log(client);
-    console.log(checkoutId);
+
     addItemToCheckout(client, checkoutId, lineItems);
   };
 
   return (
-    <div>
-      <button onClick={handleClick}>
-        <img src={item.images[0].src} alt={item.title} />
-      </button>
-    </div>
+    <>
+      <img src={logo} alt="logo" className={styles["logo"]} />
+      <div onClick={handleClick} className={styles["container"]}>
+        <button onClick={handleClick} className={styles["button"]}>
+          <img src={item.images[0].src} alt={item.title} className={styles["poster"]} />
+        </button>
+      </div>
+    </>
   );
 };
 
