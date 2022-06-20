@@ -44,6 +44,7 @@ const Event = ({ item }: Props) => {
           <img src={item.images[0].src} alt={item.title} className={styles["poster"]} />
         </button>
       </div>
+      <div className={styles["footer"]}>15$ AT DOOR</div>
     </>
   );
 };
