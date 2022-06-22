@@ -28,6 +28,8 @@ const Event = ({ item }: Props) => {
     client.checkout.addLineItems(checkoutId, items).then((checkout) => {
       window.location.href = checkout.webUrl;
     });
+
+    setTimeout(() => setClicked(false), 3000);
   };
 
   const handleClick = () => {
@@ -50,7 +52,6 @@ const Event = ({ item }: Props) => {
       return (
         <p className="product-details__point" key={text}>
           <ReactMarkdown children={finalText} remarkPlugins={[remarkGfm]} />
-          {/* {finalText} */}
         </p>
       );
     });
