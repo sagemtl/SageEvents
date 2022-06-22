@@ -4,6 +4,8 @@ import { useRecoilValue } from "recoil";
 import { Client, LineItemToAdd, Product } from "shopify-buy";
 import checkoutState from "states/checkoutState";
 import shopifyApiState from "states/shopifyApiState";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import styles from "./Event.module.scss";
 
@@ -47,7 +49,8 @@ const Event = ({ item }: Props) => {
       const finalText = text.trim();
       return (
         <p className="product-details__point" key={text}>
-          {finalText}
+          <ReactMarkdown children={finalText} remarkPlugins={[remarkGfm]} />
+          {/* {finalText} */}
         </p>
       );
     });

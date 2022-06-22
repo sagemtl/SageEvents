@@ -5,11 +5,11 @@
   border: 1px solid black;
   box-shadow: 0 5px #000000;
   cursor: pointer;
-  background: #dddddd;
+  background: rgb(221, 221, 221, 0.7);
   font-weight: 600;
   font-size: 16px;
-  color: black;
-  opacity: 70%;
+  color: #154734;
+  // opacity: 70%;
 
   &:disabled {
     cursor: not-allowed;
@@ -92,4 +92,8 @@
   .details-container {
     padding: 80px 0 0 0;
   }
+}
+
+a {
+  color: #154734;
 }
