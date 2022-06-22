@@ -25,8 +25,10 @@ const Event = ({ item }: Props) => {
     checkoutId: string | number,
     items: LineItemToAdd[]
   ) => {
-    client.checkout.addLineItems(checkoutId, items).then((checkout) => {
-      window.location.href = checkout.webUrl;
+    client.checkout.create().then((checkout) => {
+      client.checkout.addLineItems(checkout.id, items).then((checkout) => {
+        window.location.href = checkout.webUrl;
+      });
     });
 
     setTimeout(() => setClicked(false), 3000);
