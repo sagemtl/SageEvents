@@ -6,13 +6,15 @@ import RootRouter from "RootRouter";
 
 import "./global.module.scss";
 
-const App: React.FC = () => (
-  <RecoilRoot>
-    <Suspense fallback={<LoadingPage />}>
-      <BrowserRouter>
-        <RootRouter />
-      </BrowserRouter>
-    </Suspense>
-  </RecoilRoot>
-);
+const App: React.FC = () => {
+  return (
+    <RecoilRoot>
+      <Suspense fallback={<LoadingPage />}>
+        <BrowserRouter>
+          <RootRouter />
+        </BrowserRouter>
+      </Suspense>
+    </RecoilRoot>
+  );
+};
 export default App;

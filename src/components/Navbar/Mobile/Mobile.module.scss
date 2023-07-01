@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  z-index: 1;
+  padding: 50px 0;
+
+  .shop-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    .menu-logo {
+      width: 100%;
+    }
+
+    .menu-logo-2 {
+      width: 40%;
+    }
+  }
+}

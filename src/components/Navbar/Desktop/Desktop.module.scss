@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  z-index: 1;
+
+  @media only screen and (max-width: 900px) {
+    padding: 10px 10px 10px 20px;
+  }
+
+  .logo {
+    height: 200px;
+    margin: 0 16px;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    margin: 20px 30px;
+
+    .menu-item {
+      font-weight: 900;
+
+      &:hover {
+        color: #216e51;
+      }
+    }
+  }
+}

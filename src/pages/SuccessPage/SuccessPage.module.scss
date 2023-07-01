@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+
+  .success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 264px);
+    color: white;
+    font-weight: 900;
+
+    @media only screen and (max-width: 900px) {
+      min-height: calc(100vh - 452px);
+    }
+
+    .success-message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 50px;
+      text-align: center;
+
+      @media only screen and (max-width: 900px) {
+        padding: 50px;
+      }
+
+      p {
+        margin: 5px 0;
+        line-height: 24px;
+
+        @media only screen and (max-width: 900px) {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

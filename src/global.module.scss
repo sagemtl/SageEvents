@@ -1,6 +1,10 @@
 body,
 html {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #8aaac3;
+  background-image: url("/assets/background.jpg");
+  background-repeat: repeat;
 }
 
 a:link {
